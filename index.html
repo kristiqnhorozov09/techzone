@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechZone — онлайн магазин за модерна електроника и аксесоари.">
+  <title>TechZone | Технологиите са на една ръка разстояние</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="TechZone — начална страница">Tech<span>Zone</span><i>.</i></a>
+    <nav class="main-nav" aria-label="Основна навигация">
+      <a class="active" href="#home">Начало</a>
+      <a href="#products">Продукти</a>
+      <a href="#categories">Категории</a>
+      <a href="#about">За нас</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search-box">
+        <span class="sr-only">Търсене на продукт</span>
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Търси продукт..." autocomplete="off">
+      </label>
+      <a class="account-link" href="login.html" aria-label="Вход">Вход</a>
+      <button class="cart-button" id="cartButton" type="button" aria-label="Отвори количката">
+        Количка <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Отвори менюто" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> ТВОЯТ ТЕХНОЛОГИЧЕН СВЯТ</p>
+        <h1>Технологиите<br>са на една ръка <span>разстояние.</span></h1>
+        <p class="hero-copy">Открий аксесоари и устройства, които правят ежедневието по-свързано, удобно и умно.</p>
+        <a class="primary-button" href="#products">Разгледай продуктите <span aria-hidden="true">→</span></a>
+        <div class="hero-notes">
+          <span>✓ Подбрани продукти</span>
+          <span>✓ Лесно пазаруване</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Илюстрация на технологични продукти" role="img">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="device-card watch"><span class="device-icon">◉</span><small>SMART WATCH</small><strong>Stay connected.</strong></div>
+        <div class="device-card earbuds"><span class="device-icon">♫</span><small>WIRELESS AUDIO</small><strong>Feel every beat.</strong></div>
+        <div class="glow"></div>
+        <span class="hero-chip chip-one">TECH / 01</span><span class="hero-chip chip-two">NEXT GEN</span>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Предимства">
+      <div><span class="benefit-icon">↗</span><p><strong>Бърза доставка</strong><small>До удобен адрес</small></p></div>
+      <div><span class="benefit-icon">◇</span><p><strong>Сигурно пазаруване</strong><small>Лесен процес на поръчка</small></p></div>
+      <div><span class="benefit-icon">✓</span><p><strong>Подбрано качество</strong><small>Технологии за всеки ден</small></p></div>
+      <div><span class="benefit-icon">☏</span><p><strong>Помощ при нужда</strong><small>Свържи се с нашия екип</small></p></div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading">
+        <div><p class="eyebrow">НАМЕРИ СВОЕТО</p><h2>Популярни категории</h2></div>
+        <a class="text-link" href="#products">Всички продукти <span>→</span></a>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-category="Слушалки"><span class="category-symbol">♫</span><span><strong>Слушалки</strong><small>Звук без граници</small></span><b>↗</b></button>
+        <button class="category-card" data-category="Смарт часовници"><span class="category-symbol">◷</span><span><strong>Смарт часовници</strong><small>Технологии на китката</small></span><b>↗</b></button>
+        <button class="category-card" data-category="Зарядни"><span class="category-symbol">ϟ</span><span><strong>Зарядни</strong><small>Енергия за деня</small></span><b>↗</b></button>
+        <button class="category-card" data-category="Аксесоари"><span class="category-symbol">⌘</span><span><strong>Аксесоари</strong><small>Малките важни неща</small></span><b>↗</b></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <div><p class="eyebrow">ИЗБРАНО ЗА ТЕБ</p><h2>Популярни продукти</h2></div>
+        <label class="sort-control">Подреди:
+          <select id="sortSelect" aria-label="Подреди продуктите">
+            <option value="featured">Препоръчани</option>
+            <option value="price-asc">Цена: ниска към висока</option>
+            <option value="price-desc">Цена: висока към ниска</option>
+            <option value="name">Име: А–Я</option>
+          </select>
+        </label>
+      </div>
+      <div class="filter-row" aria-label="Филтри по категория">
+        <button class="filter-chip selected" data-filter="Всички">Всички</button>
+        <button class="filter-chip" data-filter="Слушалки">Слушалки</button>
+        <button class="filter-chip" data-filter="Смарт часовници">Смарт часовници</button>
+        <button class="filter-chip" data-filter="Зарядни">Зарядни</button>
+        <button class="filter-chip" data-filter="Аксесоари">Аксесоари</button>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>Няма намерени продукти. Опитай с друга дума или категория.</p>
+    </section>
+
+    <section class="newsletter" id="about">
+      <div><p class="eyebrow">ОСТАНИ В ЧАС</p><h2>Новите технологии<br>започват оттук.</h2><p>TechZone — твоето място за практични технологични решения.</p></div>
+      <a class="primary-button" href="#products">Открий продукт <span>→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="#home">Tech<span>Zone</span><i>.</i></a>
+    <p>© <span id="year"></span> TechZone. Учебен проект за дипломна работа.</p>
+    <a href="mailto:info@techzone.example">Контакти</a>
+  </footer>
+
+  <dialog class="cart-dialog" id="cartDialog">
+    <div class="dialog-heading"><div><p class="eyebrow">ТВОЯТА ПОРЪЧКА</p><h2>Количка</h2></div><button class="icon-button" id="closeCart" aria-label="Затвори количката">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total"><span>Общо</span><strong id="cartTotal">0,00 лв.</strong></div>
+    <button class="primary-button checkout-button" id="checkoutButton">Продължи към поръчка <span>→</span></button>
+    <p class="demo-note">Демонстрационна количка. Поръчките ще бъдат свързани със сървър в следващ етап.</p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
